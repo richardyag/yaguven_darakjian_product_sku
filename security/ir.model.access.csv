@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_yaguven_product_sku_config_user,yaguven.product.sku.config.user,model_yaguven_product_sku_config,base.group_user,1,0,0,0
+access_yaguven_product_sku_config_manager,yaguven.product.sku.config.manager,model_yaguven_product_sku_config,stock.group_stock_manager,1,1,1,0

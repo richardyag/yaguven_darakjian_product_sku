@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_product_sku_config_list" model="ir.ui.view">
+        <field name="name">yaguven.product.sku.config.list</field>
+        <field name="model">yaguven.product.sku.config</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="enabled" widget="boolean_toggle"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_product_sku_config_form" model="ir.ui.view">
+        <field name="name">yaguven.product.sku.config.form</field>
+        <field name="model">yaguven.product.sku.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Auto SKU — ..."/></h1>
+                    </div>
+                    <group>
+                        <field name="company_id" groups="base.group_multi_company"
+                               options="{'no_create': True}"/>
+                        <field name="enabled"/>
+                        <field name="active"/>
+                    </group>
+                    <div class="text-muted">
+                        A new product gets an Internal Reference automatically only
+                        when this is on, it does not already have one, and its
+                        Product Category has a Short Code set (Inventory &gt;
+                        Configuration &gt; Product Categories). The format is
+                        "ShortCode.00000001", using one global, never-reset counter.
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_sku_config" model="ir.actions.act_window">
+        <field name="name">Auto SKU</field>
+        <field name="res_model">yaguven.product.sku.config</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

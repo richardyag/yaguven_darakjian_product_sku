@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- One global counter, never reset per category — matches the original app's
+         "Product Sequence" (ir.sequence, 8-digit padding). Seeded well above the
+         highest number found anywhere in the existing catalog (10,042,892, including
+         non-standard/legacy codes) so it can never collide with anything migrated. -->
+    <record id="seq_product_sku" model="ir.sequence">
+        <field name="name">Darakjian — Auto SKU</field>
+        <field name="code">yaguven.product.sku</field>
+        <field name="padding">8</field>
+        <field name="number_next">11000000</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

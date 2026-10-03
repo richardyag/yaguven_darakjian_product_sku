@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_product_sku_config"
+              name="Auto SKU"
+              parent="stock.menu_stock_config_settings"
+              action="action_product_sku_config"
+              sequence="60"
+              groups="stock.group_stock_manager"/>
+
+</odoo>

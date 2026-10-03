@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- noupdate="1": seeded once, then owned by the client — an upgrade must never
+         silently flip this back on/off for them. -->
+    <record id="product_sku_config_default" model="yaguven.product.sku.config">
+        <field name="name">Auto SKU — Darakjian</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="enabled">True</field>
+    </record>
+</odoo>
